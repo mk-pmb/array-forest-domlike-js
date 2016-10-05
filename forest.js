@@ -5,7 +5,8 @@
 module.exports = (function setup() {
   var EX = {}, woodApi = require('./lib/wood.js'),
     ArfBranch = require('./lib/branch.js'),
-    ArfNodeList = require('./lib/nodelist.js');
+    ArfNodeList = require('./lib/nodelist.js'),
+    hasOwn = Function.call.bind(Object.prototype.hasOwnProperty);
 
 
   EX.wood = woodApi;
@@ -16,8 +17,14 @@ module.exports = (function setup() {
   EX.sprout = function (opt) {
     opt = (opt || false);
     var br = woodApi.blessArray((opt.seed || []), opt);
-    if (!br.tree) { br.tree = ArfBranch.fromThis; }
+    if (!hasOwn(br, 'tree')) { br.tree = EX.sprout.makeTree; }
     return br;
+  };
+  EX.sprout.makeTree = function makeTree() {
+    if (this.tree === makeTree) {
+      this.tree = Object.bind(null, new ArfBranch(this));
+    }
+    return this.tree();
   };
 
 
