@@ -1,5 +1,5 @@
 { "name": "array-forest-domlike",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Access an array of arrays (of arrays…) as a tree structure inspired by browser DOM.",
   "keywords": [
     "array of arrays",
@@ -24,7 +24,7 @@
   "private": false, "license": "ISC",
 
   "main": "forest.js",
-  "scripts": { "test": "demo-util-160404-test-demos" },
+  "scripts": { "test": "nodejs test/usage.demo.js" },
   "directories": {
     "doc": "doc",
     "test": "test"
@@ -33,7 +33,7 @@
   "dependencies": {
     "arraynge": "^0.1.2"
   },
-  "devDependencies": { "lib-demo-util-160404": "^0.1.0" },
+  "devDependencies": {},
 
 
   "npm vs. BOM = Unexpected token": "-*- coding: UTF-8 -*-"

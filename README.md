@@ -12,19 +12,9 @@ DOM.
 
 Usage
 -----
-see [doc/demo/usage.js](doc/demo/usage.js)
-:TODO:
+Sorry, no time for API docs yet.
+There's a quite verbose [test/usage.demo.js](test/usage.demo.js) though.
 
-```bash
-$ array-forest-domlike foo
-bar
-```
-
-```javascript
-var array-forest-domlike = require('array-forest-domlike');
-D.result  = array-forest-domlike(null);
-D.expect('===',           null);
-```
 
 
 <!--#toc stop="scan" -->
